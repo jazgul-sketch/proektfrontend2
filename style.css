@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(
+        90deg,
+        rgba(213, 32, 71, 0.8),
+        rgba(239, 79, 48, 0.8)
+    ),
+   url(ошгуком.jpeg);
+
+    background-repeat: no-repeat; /* 🔴 отключает повтор */
+    background-size: 100%;       /* 🔴 растягивает на весь экран */
+    background-position: center;  /* 🔴 по центру */
+    
+}
+    
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: underline;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+p{
+    color: aliceblue;
+}
+.gallery-grid {
+    
+    display: flex;
+    display: flex-start;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.gallery-item {
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.photos {
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+
+.photos .ph {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform-origin: left bottom;
+}
+
+/* --- начальные углы --- */
+.p1 { z-index: 3; transform: rotate(0deg); }
+.p2 { z-index: 2; transform: rotate(2deg); }
+.p3 { z-index: 1; transform: rotate(4deg); }
+
+/* --- наведение --- */
+.gallery-item:hover .p1 { transform: rotate(-15deg); }
+.gallery-item:hover .p2 { transform: rotate(-3deg); }
+
+.title {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
